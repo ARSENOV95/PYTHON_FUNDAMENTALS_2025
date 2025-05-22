@@ -2,7 +2,7 @@
 number_of_pours = int(input())
 
 
-tank_capacity  = 250 #LITERS #variable to hlod the total tank capacity
+tank_capacity  = 255 #LITERS #variable to hlod the total tank capacity
 liters_poured = 0 #variable to store the amount of leters poured 
 
 for current_pour in range(number_of_pours): # a loop to inititate a pour of water for the total number of pours 
