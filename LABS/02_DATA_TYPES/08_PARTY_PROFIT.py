@@ -1,31 +1,22 @@
-party_size = int(input())
-advenure_lenght_days = int(input())
+import sys
 
+number_of_snowballs = int(input())
 
-total_coins_earned = 0 
+highest_value = -sys.maxsize 
+result = '' #variable to store the final result
 
-for day in range(1,advenure_lenght_days + 1):
-    coins_per_day = 50
+for snawballs in range (number_of_snowballs):
+    snowball_weight = int(input())        
+    target_time = int(input())
+    snowball_quality  = int(input())
 
-    if day %10 == 0:
-        party_size -= 2
-    
-    if day %15 == 0:
-        party_size += 5
+    snowball_value = 0
 
+    snowball_value = (snowball_weight/target_time) **snowball_quality
+    if snowball_value > highest_value:   #if the value of the snallball is > the current largest value, it will become the new largest value 
+        highest_value = snowball_value
 
-    coins_per_day -= (party_size * 2)
+        #calculations for the final result based on the largest value 
+        result= f"{snowball_weight} : {target_time} = {int(snowball_value)} ({snowball_quality})" 
 
-    if day %3 == 0:
-        coins_per_day -= (party_size * 3)
-
-    if day %5 == 0:
-        coins_per_day += (party_size * 20)
-        if day %3 == 0:
-           coins_per_day -= (party_size * 2)
-
-    
-    total_coins_earned += coins_per_day
-
-print(f'{party_size} companions received {int(total_coins_earned/party_size)} coins each.')
-
+print(result)
