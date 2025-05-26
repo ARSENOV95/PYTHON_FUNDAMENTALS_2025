@@ -16,6 +16,8 @@ user_choice = int(input("Please enter the number of the option you like to choos
 text_entry = input("Please input text: ")
 
 text_result = ''
+vowels = 'aeiou'
+
 
 confirm_choice = input("Please confirm your choice with Y/N: ")
 if confirm_choice == 'N':
@@ -52,8 +54,6 @@ elif user_choice == 4:
 
 elif user_choice == 5:
 
-
-    vowels = 'aeiou'
     vowels_count = 0
 
     for letter in text_entry:
@@ -67,7 +67,29 @@ elif user_choice == 5:
         text_result = vowels_count
 
 elif user_choice == 6:
-    pass
+    text_result = text_entry.replace(" ", "") #we use the repalce method to remove all spaces
+
+elif user_choice == 7:
+    for letter in text_entry:
+        if letter in vowels or letter in vowels.upper():
+            letter = letter.replace(letter, '*')
+        
+        text_result += letter
+
+elif user_choice == 8:
+    is_palindrome = False
+    text_entry = text_entry.replace(" ", "").lower()
+    
+    reversed_text = text_entry[::-1]
+    if reversed_text == text_entry:
+        is_palindrome = True
+    
+    if is_palindrome:
+        text_result = "The given text is a Palindrome"
+    else:
+        text_result = "The given text is not a Palindrome"
+
 
 print(text_result)
+
 
