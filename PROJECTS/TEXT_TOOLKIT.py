@@ -20,6 +20,7 @@ vowels = 'aeiou'
 
 
 confirm_choice = input("Please confirm your choice with Y/N: ")
+
 if confirm_choice == 'N':
     final_confirmation = input("Would you like to make a new choice Y/N?: ")
     if final_confirmation == 'Y':
@@ -27,6 +28,9 @@ if confirm_choice == 'N':
     else:
         print("Have a great day!")
         quit()
+elif confirm_choice != 'Y':
+    print("Invalid choice, please try again!")
+    quit()
 
 if user_choice == 1:
     text_result = text_entry[::-1]
@@ -88,6 +92,12 @@ elif user_choice == 8:
         text_result = "The given text is a Palindrome"
     else:
         text_result = "The given text is not a Palindrome"
+
+elif user_choice == 9:
+    pass
+
+
+
 
 
 print(text_result)
