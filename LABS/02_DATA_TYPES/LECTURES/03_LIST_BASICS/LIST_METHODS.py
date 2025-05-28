@@ -19,8 +19,11 @@ print(list_of_numbers) #prints the list after insertion
 list_of_numbers.pop() #
 print(list_of_numbers) #removes the last element of the list
 
-list_of_numbers.pop(2) 
+list_of_numbers.pop(2) #removes the element at index 2
 print(list_of_numbers) 
 
 reversed = list_of_numbers.reverse() #reverses the list
 print(list_of_numbers) #prints the list after reversing
+
+removed = list_of_numbers.remove(2) #
+print(removed)
