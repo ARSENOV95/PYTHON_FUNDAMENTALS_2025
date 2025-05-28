@@ -1,19 +1,36 @@
-number_of_strings = int(input())
+numbers = int(input())
 
-seatch_criteria = input()
-
-list_of_strings = [] 
-filtered_list = []
+available_commands = ("even","odd","psotive","negative")
 
 
-for current_string in range(number_of_strings):
-    new_string = input()
+list_of_numbers = []
+result = []
 
-    list_of_strings.append(new_string)
+for number in range(numbers):
+    current_number = int(input())
+    list_of_numbers.append(current_number)
 
-    if seatch_criteria in new_string:
-        filtered_list.append(new_string)
+
+    
+command = input()
+
+if command not in available_commands:
+    quit()
 
 
-print(f"{list_of_strings} \n{filtered_list}")
+for element in list_of_numbers:
+    if command == "even":
+        if element % 2 == 0:
+            result.append(element)
+    elif command == "odd":
+        if element % 2 != 0:
+            result.append(element)
+    elif command == "positive":
+        if element >= 0:
+            result.append(element)
+    elif command == "negative":
+       if element < 0:
+           result.append(element)
 
+
+print(result)
