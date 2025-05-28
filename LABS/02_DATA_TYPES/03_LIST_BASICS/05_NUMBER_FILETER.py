@@ -1,6 +1,6 @@
 numbers = int(input())
 
-available_commands = ("even","odd","psotive","negative")
+available_commands = ("even","odd","positive","negative")
 
 
 list_of_numbers = []
