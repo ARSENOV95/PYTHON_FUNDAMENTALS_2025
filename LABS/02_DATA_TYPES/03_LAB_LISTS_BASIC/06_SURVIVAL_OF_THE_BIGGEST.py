@@ -1,13 +1,12 @@
-list_of_integers = list(map(int,input().split())) #takes an iinput consisting of severa numnbers in on string and maps them as integers  and palces them as elements in a list
-numbers_to_remove = int(input()) #number of elements to be removed 
+number_of_integers = input().split( )  #we input a single string of numbers separated by a " " ans split it inot a list of elemnts (all string)
+numbers_to_remove = int(input())     #count of how many numbers form min to max to be removed 
 
 
-for number_removed in range(numbers_to_remove):
-    list_of_integers.remove(min(list_of_integers))
+numbers_sorted  = [int(number) for number in number_of_integers]
 
-list_of_biggest = ", ".join(map(str,list_of_integers))
+for current_number in range(numbers_to_remove):
+    numbers_sorted.sort(reverse=True)
+    del numbers_sorted[-1]
 
-print(list_of_biggest)
-
-
-
+result = ", ".join(map(str,numbers_sorted))
+print(result)
