@@ -27,3 +27,4 @@ print(list_of_numbers) #prints the list after reversing
 
 removed = list_of_numbers.remove(2) #
 print(removed)
+
