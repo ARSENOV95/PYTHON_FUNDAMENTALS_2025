@@ -1,0 +1,16 @@
+a_list_of_numbers = input().split(", ") #enter a stirng of numbers separated by ", " and append them tyo a list split by ", "
+
+a_list_of_numbers = [int(integer) for integer in a_list_of_numbers] #convert every element of the list to an integer 
+
+ #create one list to store the final outlook of the list 
+
+dummy_index = 1000
+
+for number in range(len(a_list_of_numbers)-1,-1,-1):  
+    
+    if a_list_of_numbers[number] == 0:
+        del a_list_of_numbers[number]
+        a_list_of_numbers.insert(dummy_index,0)
+
+           
+print(a_list_of_numbers)
