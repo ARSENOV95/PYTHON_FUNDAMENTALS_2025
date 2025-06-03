@@ -1,13 +1,13 @@
-sequence_of_numbers = input().split(" ")
-lookup_string = input()
+sequence_of_numbers = input().split(" ") #a list with a set of numbers needed to find the index
+lookup_string = input() # string from which we have to 
 
-list_of_chars = []
+list_of_chars = [] #an emtyp string used to convert  the lookup string into a list character by character
 
-for index in lookup_string:
+for index in lookup_string: #a loop to append every element of the string into the lookup list
     list_of_chars.append(index)
 
 
-final_message = []
+final_message = [] #a final string to store the elements st
 
 for numbers in sequence_of_numbers:
     number_set = [int(num) for num in numbers]
