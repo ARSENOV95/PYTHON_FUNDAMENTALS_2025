@@ -32,8 +32,6 @@ def calculator():
         result  = subtraction(a=number_1,b=number_2)
         
     
-    print(result)
-
-
+    print(int(result))
 
 calculator()
