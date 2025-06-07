@@ -1,0 +1,4 @@
+number = int(input())
+
+def perfect_number(num :int)
+
