@@ -1,16 +1,15 @@
-def min_max_sum():
+def min_max_sum(numbers :list)->int:
 
-    number_sequence = input().split(" ")
-    list_of_number = [int(num) for num in number_sequence]
-
-    min_val = min(list_of_number)
-    max_val = max(list_of_number)
-    sum_numbers = sum(list_of_number)
+    min_val = min(numbers)
+    max_val = max(numbers)
+    sum_numbers = sum(numbers)
 
     return f"The minimum number is {min_val} \nThe maximum number is {max_val} \nThe sum number is: {sum_numbers}"
 
+number_sequence = input().split(" ")
+list_of_numbers = [int(num) for num in number_sequence] #converts the intial sequence into numbers
 
-print(min_max_sum())
+print(min_max_sum(list_of_numbers))
 
 
         
