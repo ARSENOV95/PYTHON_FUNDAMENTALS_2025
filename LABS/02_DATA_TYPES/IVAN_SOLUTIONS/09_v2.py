@@ -1,0 +1,1 @@
+###for homewok doe it with 3-4 functions 
