@@ -7,8 +7,11 @@ def is_perfect(some_number :int) ->str:
 
 
     if devisors_sum == some_number:
-        return "We have a perfect number"
-    return "It's not so perfect."
+        return "We have a perfect number"  #when the if clause is true the return will execute and the rest of the program will not complete
+    return "It's not so perfect." #when the if clause is false, then the row will be skipped 
+                       
+                                    
+
 
 number = int(input())
 

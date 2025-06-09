@@ -8,9 +8,8 @@ def perfect_number(num: int):
     
     if sum_devisors == num:
         return "We have a perfect number!"
-    return "It's not so perfect."   #when the if clause is true the return will execute and the rest of the program will not complete
-                                    #when the if clause is false, then the row will be skipped 
-
+    else:
+        return "It's not so perfect."   
     
 number = int(input())
 print(perfect_number(number))
