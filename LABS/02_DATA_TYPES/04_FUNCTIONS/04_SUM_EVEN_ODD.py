@@ -1,6 +1,3 @@
-number = input()
-
-
 def sum_of_digits(input_number : str):
     odd_sum = 0
     even_sum  = 0
@@ -16,5 +13,7 @@ def sum_of_digits(input_number : str):
             odd_sum += current_number
 
     return f"Odd sum = {odd_sum}, Even sum = {even_sum}"
+
+number = input()
 
 print(sum_of_digits(number))
