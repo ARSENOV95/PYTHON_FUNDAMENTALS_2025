@@ -1,18 +1,11 @@
-number_sequence = input().split(', ') # a list of sptrings to split the given numbers into different elements
+def palindrome(string :str)->bool:
+        reversed_number = int(string[::-1]) # string splicing is used to reverse the element and covent it int oan integer
+        current_number = int(string)
 
+        return  current_number == reversed_number
 
-def palindrome(squence):
+string_sequence = input().split(', ') # a list of sptrings to split the given numbers into different elements
 
-    for number in number_sequence: # for every element
-        is_palindrome = False  #falg variable to see if the number is a palindrome
-    
-        reversed_number = int(number[::-1]) # string splicing is used to reverse the element and covent it int oan integer
-        current_nnumber = int(number)
+for current_string in string_sequence:
+   print(palindrome(current_string))
 
-        if current_nnumber == reversed_number:
-            is_palindrome = True
-    
-        print(is_palindrome)
-
-
-palindrome(number_sequence)
