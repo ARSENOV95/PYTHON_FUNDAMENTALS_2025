@@ -1,0 +1,1 @@
+nuber_of_soldiers = input().split()

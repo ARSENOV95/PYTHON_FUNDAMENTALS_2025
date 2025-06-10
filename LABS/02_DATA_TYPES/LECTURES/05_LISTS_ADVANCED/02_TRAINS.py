@@ -1,6 +1,6 @@
 number_of_carts = int(input())
 
-train = []
+train = [0] * number_of_carts
 
 for current_cart in range(number_of_carts):
     train.append(0)
@@ -22,10 +22,9 @@ while command != "End":
         train[-1] += passangers_number
 
     elif action == 'insert':
-        train.insert(passenger_seat,passangers_number)
+        train[passenger_seat] += passangers_number
     elif action == 'leave':
-         train[passenger_seat] -= passangers_number
+        train[passenger_seat] -= passangers_number
 
     command = input()
-
 print(train)
