@@ -2,14 +2,14 @@ def check_happiness(happyness_lst,factor):
 
     improved_happiness = [cur_val * factor for cur_val in happyness_lst]
     avg_happiness  = sum(improved_happiness) / len(improved_happiness)
+    happy_count = sum(num > avg_happiness for num in improved_happiness)
+    total_count = len(improved_happiness)
 
-    happy = list(filter(lambda x: x > avg_happiness,improved_happiness))
+    message = "happy" if  happy_count >=  total_count /2 else "not happy"
 
-    if len(happy) < len(improved_happiness):
-        return f"{len(happy)}/{len(improved_happiness)}.\n Employees are not happy!"
+    return f"Score: {happy_count}/{total_count}.\nEmployees are {message}!"
+
     
-    return f"{len(happy)}/{len(improved_happiness)}.\n Employees are happy!"
-
 happiness_lst = list(map(int,input().split()))
 happiness_factor = int(input())
 
