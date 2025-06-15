@@ -5,7 +5,7 @@ def check_happiness(happyness_lst,factor):
 
     happy = len(list(filter(lambda x: x > avg_happiness,improved_happiness)))
     
-    message = "happy" if happy >= len(improved_happiness) else "not happy"
+    message = "happy" if happy >= len(improved_happiness) / 2 else "not happy"
     return f"Score: {happy}/{len(improved_happiness)}. Employees are {message}!"
     
 happiness_lst = list(map(int,input().split()))
