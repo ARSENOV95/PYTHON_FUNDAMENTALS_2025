@@ -1,6 +1,5 @@
 number_sequence = list(map(int,input().split(","))) 
 
-
 group = 0 #inital value of the group wich we will increase on every itteration 
 
 while len(number_sequence) > 0: #while the original list is > 0
