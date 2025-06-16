@@ -1,3 +1,0 @@
-list = [None,None,None]
-
-print(len(list))
