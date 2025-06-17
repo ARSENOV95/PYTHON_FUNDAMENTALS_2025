@@ -1,34 +1,33 @@
 encoded_message = input().split(" ")
 
-
 command = input()
 
 while command != "3:1":
     
-    full_command = command.split(" ")
-    
-    command_body = full_command[0]
-    start_index = int(full_command[1])
-    end_index = int(full_command[2])
+    command_body,start_index,end_index = command.split(" ") 
+ 
+    start_index = int(start_index)
+    end_index = int(end_index)
 
-    if command_body == 'merge':
-        if end_index > len(encoded_message):
-            end_index = -1
 
-        merged = encoded_message[start_index:end_index]
-        merged = ''.join(merged)
-        
+    if command_body == 'merge' and start_index in range(len(encoded_message)):
+        merged = ''.join(encoded_message[start_index:end_index])
+
         del(encoded_message[start_index : end_index])
         encoded_message.insert(start_index,merged)
+        
+    
+    elif command_body == 'devide':
+        devisable_index = encoded_message[start_index]
 
-    #if command_body == 'devide':
+        for index in devisable_index:
+     
 
 
 
-    print(encoded_message)
     command = input()
 
 
-
+    print(encoded_message)
 
 
