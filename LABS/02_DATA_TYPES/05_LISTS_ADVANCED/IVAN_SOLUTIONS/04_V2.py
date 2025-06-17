@@ -1,0 +1,1 @@
+reso;lved via function singe to determoine if even or odd 
