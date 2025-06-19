@@ -11,7 +11,6 @@ turn_number = 0
 while True:
     player_input = input()
 
-
     if player_input == "end":   #if the programs is ended we check if the sequence is empty if not we print the current state
         print("Sorry you lose :(")
         print(f'{" ".join(sequence_of_indexes)}')
