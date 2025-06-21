@@ -8,7 +8,7 @@ students_per_hour =  fist_employee_capacity + second_employee_capacity + third_e
 
 total_hours = 0 #intial hours = 0 as its the start pof the working day
 
-while num_students: #if afer the last hour there are moe students left we stop the loop
+while num_students > 0: #if afer the last hour there are moe students left we stop the loop
     total_hours += 1 # the hour is increase meanign na hour is passed 
 
     if total_hours %4 == 0: #if the hour is 4th hour the emplyoees are on a break
