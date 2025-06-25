@@ -1,0 +1,50 @@
+row_one = list(map(int,input().split()))
+row_two = list(map(int,input().split()))
+row_three = list(map(int,input().split()))
+
+
+player_one =  False
+player_two =  False
+
+for index1 in range(len(row_one)):
+    for index2 in range(len(row_two)):
+        for index3 in range(len(row_three)):
+            val_index = row_one[index1]
+            if row_one[index1] == row_two[index2] == row_three[index3]:   
+                if val_index == 1:
+                    player_one = True
+                    break
+                elif val_index == 2:
+                    player_two = True
+                    break
+                
+            elif row_one[index1] == row_two[index1 -1] == row_two[index1 -2]:
+                if val_index == 1:
+                    player_one = True
+                    break
+                elif val_index == 2:
+                    player_two = True
+                    break
+
+            elif row_one[index1 -2] == row_two[index1 -1] == row_two[index1]:
+                if val_index == 1:
+                    player_one = True
+                    break
+                elif val_index == 2:
+                    player_two = True
+                    break
+
+else:
+    if row_one.count(1)  == 3 or row_two.count(1) == 3 or row_three.count(1) == 3:
+        player_one = True
+    elif row_one.count(2)  == 3 or row_two.count(2) == 3 or row_three.count(2) == 3:
+        player_two = True
+
+    else:
+        print("Draw!")
+
+
+if player_one:
+    print("First player won")
+elif player_two:
+    print("Second player won")
