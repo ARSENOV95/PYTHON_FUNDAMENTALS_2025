@@ -1,11 +1,11 @@
 class Comment():
-    def __init__(self,username,comment,likes = 0):
+    def __init__(self,username,content,likes = 0):
         self.username = username
-        self.comment = comment
+        self.content = content
         self.likes = likes
 
 
 comment = Comment("user1", "I like this book")
 print(comment.username)
-print(comment.comment)
+print(comment.content)
 print(comment.likes)

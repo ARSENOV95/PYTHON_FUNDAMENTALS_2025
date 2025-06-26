@@ -13,7 +13,7 @@ class Email():
 
 emails = []   
 
-while (data:= input()) != 'stop':
+while (data:= input()) != 'Stop':
     sender_,receiver_,content_ = data.split()
     email = Email(sender_,receiver_,content_)
     emails.append(email)
@@ -21,7 +21,8 @@ while (data:= input()) != 'stop':
 indices = list(map(int,input().split(', ')))
 
 for index in indices:
-    emails[index].send()
+    emails[index].sent()
 
 for email in emails:
-    email.get_info()
+    print(email.get_info())
+
