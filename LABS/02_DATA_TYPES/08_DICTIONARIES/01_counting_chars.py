@@ -1,10 +1,7 @@
 string = input()
-
 char_count = {}
 
-
 for char in string:
-    char = char.lower()
     if char == " ":
         continue
 

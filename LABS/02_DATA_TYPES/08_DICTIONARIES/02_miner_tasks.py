@@ -1,19 +1,17 @@
-count = 0
-items = {}
 list_of_items = []
+all_items = {}
 
-while (string := input()) != 'stop':
-    list_of_items.append(string)
+while (item := input()) != 'stop':
+    list_of_items.append(item)
 
-for i in range(1,len(list_of_items)+1,2):
+for i in range(0,len(list_of_items),2):
     key = list_of_items[i]
-    value = int(list_of_items[i+1])
+    value = int(list_of_items[i + 1])
 
-    if key not in items:
-        items[key] = 0
+    if key not in all_items:
+        all_items[key] = 0
+    all_items[key] += value
 
-    items[key] +=  value
-        
 
-for key,value in items.items():
-    print(f"{key} -> {items}")
+for key,value in all_items.items():
+    print(f"{key} -> {value}")
