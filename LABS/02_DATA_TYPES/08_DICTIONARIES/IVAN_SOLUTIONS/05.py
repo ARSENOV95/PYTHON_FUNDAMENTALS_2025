@@ -11,7 +11,7 @@ while not got_legendary_item:
         key = current_item[index+1].lower()
 
         if key not in materails:
-            materails[key] = 0
+           materails[key] = 0
         materails[key] += value
 
         if materails["shards"] >= 250:
@@ -26,6 +26,9 @@ while not got_legendary_item:
             materails["motes"]  -= 250
             print("Dragonwrath obtained!")
             got_legendary_item = True
+
+        if  got_legendary_item:
+            break
 
 for material,quantity in materails.items():
     print(f"{material}: {quantity}")
