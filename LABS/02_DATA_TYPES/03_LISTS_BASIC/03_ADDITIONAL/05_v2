@@ -39,7 +39,6 @@ else:
         player_one = True
     elif row_one.count(2)  == 3 or row_two.count(2) == 3 or row_three.count(2) == 3:
         player_two = True
-
     else:
         print("Draw!")
 

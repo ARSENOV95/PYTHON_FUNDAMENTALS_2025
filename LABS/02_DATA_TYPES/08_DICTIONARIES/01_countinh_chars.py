@@ -1,0 +1,19 @@
+string = input()
+
+char_count = {}
+
+
+for char in string:
+    char = char.lower()
+    if char == " ":
+        continue
+
+    if char not in char_count:
+        char_count[char] = 0
+
+    char_count[char] += 1
+
+
+for key,value in char_count.items():
+    print(f"{key} -> {value}")
+
