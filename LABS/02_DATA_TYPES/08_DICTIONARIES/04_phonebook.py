@@ -1,5 +1,4 @@
 phonebook = {}
-
 attempts = 0
 
 while True:
