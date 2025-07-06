@@ -9,4 +9,8 @@ while (company_entry := input()) != "End":
     if id_ not in company_ids[company]:
         company_ids[company].append(id_)
 
-print(company_ids)
+
+for company in company_ids.keys():
+    print(company)
+    for id_ in  company_ids[company]:
+        print(f"-- {id_}")
