@@ -49,6 +49,9 @@ print("Ranking:")
 
 for key,value in sorted(user_contests.items()):
     print(key)
-    for val1 in value:
-        
+    for contest_points in value:
+        for contest,poits in contest_points.items():
+            print(f"#  {contest} -> {poits}")
+
+
 
