@@ -30,6 +30,7 @@ while True:
 
     if contest not in user_contests[username]:
         user_contests[username].append({contest:points})
+    
     elif user_contests[username][contest] < points:
         user_contests[username][contest] = points
 
