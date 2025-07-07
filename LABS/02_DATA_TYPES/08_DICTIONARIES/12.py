@@ -17,7 +17,7 @@ while (entry := input()) != "exam finished":
 
     if username not in statistics[language][0].keys():
         statistics[language][0].update({username:points})
-    elif statistics[language][0][username] < points:
+    elif statistics[language][0][username].values() < points:
        statistics[language][0][username] = points
     statistics[language][1] += 1   
 
