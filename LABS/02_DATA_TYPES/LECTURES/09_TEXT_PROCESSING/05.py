@@ -1,6 +1,5 @@
-input_string = input()
-
-numbers = letters = special = ''
+input_string = input() 
+numbers = letters = special = '' 
 
 for char in input_string:
     if char.isnumeric():
