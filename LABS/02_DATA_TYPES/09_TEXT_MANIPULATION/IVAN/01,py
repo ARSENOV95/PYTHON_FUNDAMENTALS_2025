@@ -1,0 +1,31 @@
+def length_is_valid(user:str)->bool:
+    if 3 <= len(user) <= 16:
+        return True
+    return False
+
+def characters_are_valid(user:str)->bool:
+    for character in user:
+        if not(character.isalnum() or\
+               character == "_" or character == "-"):
+            return False
+    return True
+
+def no_redundent_symbols(user:str)->bool:
+    if " " in user:
+        return False
+    return True
+
+
+def username_is_valid(user:str)->bool:
+    if length_is_valid(user) and\
+       characters_are_valid(user) and\
+       no_redundent_symbols(user):
+       return True
+    return False
+
+
+usernames = input().split(", ")
+
+for username in usernames:
+    if username_is_valid(username):
+       print(username)

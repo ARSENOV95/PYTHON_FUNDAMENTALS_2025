@@ -2,7 +2,6 @@ message_input = input()
 decripted = ''
 
 for char in message_input:
-    encripted = ord(char) + 3
-    decripted += chr(encripted)
-    
+    decripted += chr(ord(char)+ 3) 
+ 
 print(decripted)

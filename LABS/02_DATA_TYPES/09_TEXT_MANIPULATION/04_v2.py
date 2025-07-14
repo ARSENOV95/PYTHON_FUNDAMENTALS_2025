@@ -1,0 +1,1 @@
+print(''.join([ord(chr(char)* 3) for char in input()]))

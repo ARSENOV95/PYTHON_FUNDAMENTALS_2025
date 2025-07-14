@@ -1,8 +1,7 @@
-input_string = input().split(" ")
+input_string = input()
 emoji = []
 
-for string in input_string:
-    if string.startswith(":"):
-        emoji.append(string[:2]) #takes 1 symbol after the :
+for index in range(len(input_string) - 1):
+    if input_string[index].startswith(":"):
+        print(f":{input_string[index+1]}")
 
-print('\n'.join(emoji))
