@@ -8,4 +8,4 @@ emails = re.findall(pattern,sentence)
 
 if emails:
    for email in emails:
-       print(email.group(0))
+       print(email[0])
