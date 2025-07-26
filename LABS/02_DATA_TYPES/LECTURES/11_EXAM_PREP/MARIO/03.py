@@ -22,6 +22,7 @@ def need_for_speed():
                     print(f"{car} driven for {distance} kilometers. {fuel_needed} liters of fuel consumed.")
                     if cars[car]['mileage'] >= 100000:
                         print(f'Time to sell the {car}!')
+                        del cars[car]
 
             case 'Refuel':
                 fuel_amount = int(parts[2])
