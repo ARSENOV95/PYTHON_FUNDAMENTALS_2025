@@ -8,7 +8,7 @@ total_calories = 0
 food_info = {}
 
 
-pattern = r'\|([A-Za-z\s]+)\|(\d{2}\/\d{2}\/\d{2})\|(\d{0,10000})\||\#([A-Za-z\s]+)\#(\d{2}\/\d{2}\/\d{2})\#(\d{0,10000})\#'
+pattern = r'(?i)#([a-z\s]+)#(\d{2}\/\d{2}\/\d{2})#(\d+)#|\|([a-z\s]+)\|(\d{2}\/\d{2}\/\d{2})\|(\d+)\|'
 
 match = re.finditer(pattern,food_supply)
 
