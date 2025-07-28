@@ -1,42 +1,59 @@
+def rate(additonal_info :str,plant_dict :dict)->dict:
+    some_plant,some_rating = additonal_info.split(' - ')
+    some_rating = int(some_rating)
 
-def rate (some_list :str,some_plants :dict,some_plant_rating:dict)->dict:
-    parts = some_list.split(' - ')
-    plant,rating = parts[0],int(parts[1])
-
-    if plant not in some_plant_rating.keys():
-        some_plant_rating[plant] = {'rarity':some_plants[plant],'rating':rating}
-    elif plant in some_plant_rating.keys():
-        if some_plant_rating[plant]['rating'] == 0:
-            some_plant_rating[plant]['rating'] = rating
+    if some_plant in plant_dict.keys():
+        if plant_dict[some_plant]['rating'] == 0.00:
+            plant_dict[some_plant]['rating']  = some_rating
         else:
-             some_plant_rating[plant]['rating'] = (some_plant_rating[plant]['rating'] + rating)/2
-    return some_plant_rating
+            plant_dict[some_plant]['rating']  =  (plant_dict[some_plant]['rating'] + some_rating)/2
+    else:
+        print("error")
+    return plant_dict
 
+def update(additonal_info :str,plant_dict :dict)->dict:
+    some_plant,new_rarity = additonal_info.split(' - ')
+    new_rarity = int(new_rarity)
+    if some_plant in plant_dict.keys():
+        plant_dict[some_plant]['rarity'] = new_rarity
+    else:
+        print("error")
+    return plant_dict
 
-n = int(input())
+def reset(additonal_info:str,plant_dict :dict)->dict:
+    some_plant = additonal_info
+    if some_plant in plant_dict.keys():
+        plant_dict[some_plant]['rating'] = 0
+    else:
+        print("error")
+    return plant_dict
 
-plants = {}
-plants_ratings = {}
+##############################user input#################################
+n = int(input())   
+plants = {} 
 
 for i in range(n):
     info = input().split('<->')
     plat,rarity = info[0],int(info[1])
     
     if plat not in plants.keys():
-        plants[plat] = 0
-    plants[plat] = rarity
+        plants[plat] = {'rarity':0,'rating': 0.00}
+    plants[plat]['rarity'] = rarity
 
-while (command := input()) != 'Exhibition':
-    parts = command.split(':')
+while (command := input()) != "Exhibition":
+    parts = command.split(': ')
     action = parts[0]
     plant_rating = parts[1]
 
     match action:
-        case 'Rate':
-            plants_ratings = rate(plant_rating,plants,plants_ratings)
-        case 'Update':
-            pass
-        case 'Reset':
-            pass
+        case "Rate":
+            plants = rate(plant_rating,plants)          
+        case "Update":
+            plants = update(plant_rating,plants)   
+        case "Reset":
+            plants = reset(plant_rating,plants)
 
-print(plants_ratings)
+print("Plants for the exhibition:")
+
+for curr_plant,info in plants.items():
+    print(f"- {curr_plant}; Rarity: {info['rarity']}; Rating: {info['rating']:.2f}")

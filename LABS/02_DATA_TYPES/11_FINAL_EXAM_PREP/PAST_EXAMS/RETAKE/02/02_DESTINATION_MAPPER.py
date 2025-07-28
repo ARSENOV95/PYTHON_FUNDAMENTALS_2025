@@ -2,10 +2,9 @@ import re
 
 locations = input()
 
-filter_pattern = r'([=\/])([A-Z][A-Za-z]+)\1'
+filter_pattern = r'([=\/])([A-Z][A-Za-z]{2,})\1'
 
 list_of_locations = re.findall(filter_pattern,locations)
-print(list_of_locations)
 
 destinations = [dest[1] for dest in list_of_locations]
 print(f"Destinations: {', '.join(destinations)}")

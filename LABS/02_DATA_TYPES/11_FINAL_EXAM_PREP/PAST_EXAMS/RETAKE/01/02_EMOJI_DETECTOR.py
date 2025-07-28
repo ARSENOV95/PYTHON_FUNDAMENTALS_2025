@@ -13,14 +13,14 @@ matches = re.findall(emoji_pattern,emojis)
 
 print(f"Cool threshold: {coolness_threshold}")
 
-if matches:
-    print(f"{len(matches)} emojis found in the text. The cool ones are:")
 
-    for match in matches:
-        coolness = 0
-        for char in match[1]:
-            coolness +=  ord(char)
+print(f"{len(matches)} emojis found in the text. The cool ones are:")
 
-        if coolness >= coolness_threshold:
-            print(f"{match[0]}{match[1]}{match[0]}")
+for match in matches:
+    coolness = 0
+    for char in match[1]:
+       coolness +=  ord(char)
+
+    if coolness >= coolness_threshold:
+        print(f"{match[0]}{match[1]}{match[0]}")
 
