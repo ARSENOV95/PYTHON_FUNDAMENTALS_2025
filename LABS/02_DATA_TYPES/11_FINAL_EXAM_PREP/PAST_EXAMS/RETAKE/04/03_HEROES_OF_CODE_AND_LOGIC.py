@@ -32,7 +32,7 @@ while (command := input()) != 'End':
                 heroes_vitals[name]['MP'] -= needed_mp
                 print(f"{name} has successfully cast {spell} and now has {heroes_vitals[name]['MP']} MP!")
             else:
-                print(f"{name} does not have enough MP to cast {spell}")
+                print(f"{name} does not have enough MP to cast {spell}!")
         
         case 'TakeDamage':
              damage,attacker = int(command_body[2]),command_body[3]
@@ -52,7 +52,7 @@ while (command := input()) != 'End':
 
         case 'Heal':
             amount = int(command_body[2])
-            health_needed = min((200 - heroes_vitals[name]['HP']),amount)
+            health_needed = min((100 - heroes_vitals[name]['HP']),amount)
             
             heroes_vitals[name]['HP'] += health_needed
             print(f"{name} healed for {health_needed} HP!")
@@ -60,5 +60,5 @@ while (command := input()) != 'End':
 
 for name,vitals in heroes_vitals.items():
     print(name)
-    print(f' HP: {vitals['HP']}')
-    print(f' MP: {vitals['MP']}')
+    print(f" HP: {vitals['HP']}")
+    print(f" MP: {vitals['MP']}")
