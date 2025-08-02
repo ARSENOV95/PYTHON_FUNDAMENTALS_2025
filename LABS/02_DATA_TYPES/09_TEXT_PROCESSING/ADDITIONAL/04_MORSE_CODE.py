@@ -14,11 +14,11 @@ encription  = inital.split(' | ') # a list made only for fraagmentign the messag
 
 for word in encription: #loop by each word of the ltter 
     letters = word.split() #split the words into letters 
-    for letter in letters:
-        if letter in morse_alphabet.keys():
-            inital = inital.replace(letter + ' ',morse_alphabet[letter].upper(),1)
+    for letter in letters: 
+        if letter in morse_alphabet.keys(): #check if the current letter is in the code alpahbet 
+            inital = inital.replace(letter,morse_alphabet[letter].upper(),1) #replace each coded ltter with its upper lating counterpart 
 
-#inital = inital.replace(' ','')
-inital = inital.replace(' | ',' ')
+inital = inital.replace(' ','') #remove all bank spaces between the ltters and the | devider
+inital = inital.replace('|',' ') #replace the devider with " "
 
 print(inital)

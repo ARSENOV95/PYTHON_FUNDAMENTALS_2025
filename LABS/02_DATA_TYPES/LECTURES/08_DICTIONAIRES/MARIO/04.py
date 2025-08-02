@@ -9,7 +9,7 @@ while True:
         break
 
 
-    name, id_,courese = students_info(':')
+    name, id_,courese = students_info.split(':')
     students.append({'name': name,'ID': id_,'course': courese})
 
 
