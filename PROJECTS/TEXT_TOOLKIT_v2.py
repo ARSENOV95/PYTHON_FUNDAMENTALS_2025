@@ -1,4 +1,5 @@
 import toolkit_functionality as utilities
+import options as text
 
 print("Welcome ot the Text Transformation kit!\nChoose a transformation option:" )
 print("1. Reverse Text")
@@ -21,8 +22,14 @@ confirm_choice = input("Please confirm choice Y/N: ")
 
 
 confirmation = utilities.select_choice(confirm_choice)
-print(confirmation)
+#print(confirmation)
 
 if confirmation == 'N':
     quit("Exiting program.")
+
+if confirmation != 'Y':
+    user_choice = intial_input
+else:
+    user_choice = confirmation
+
 
