@@ -9,8 +9,8 @@ coolness = prod([int(char) for char in initial_string if char.isnumeric()]) #cre
 
 emojies = re.findall(pattern,initial_string)
 
-print(coolness)
-print(f"{len(emojies)} found in the text. The cool ones are:")
+print(f"Cool threshold: {coolness}")
+print(f"{len(emojies)} emojis found in the text. The cool ones are:")
 
 for emoji in emojies:
 
