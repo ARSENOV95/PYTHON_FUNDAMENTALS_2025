@@ -1,3 +1,5 @@
+#Text toolkit v1#
+
 import toolkit_functionality as utilities
 import options as text
 
@@ -16,8 +18,9 @@ print("9. Word Frequency Counter")
 #2025-08-12 added input validation
 intial_input = input()
 
-utilities.valid_input(intial_input)
-print(intial_input)
+user_choice = utilities.valid_input(intial_input)
+print(user_choice)
+
 
 confirm_choice = input("Please confirm choice Y/N: ")
 
@@ -25,12 +28,9 @@ confirm_choice = input("Please confirm choice Y/N: ")
 confirmation = utilities.select_choice(confirm_choice)
 #print(confirmation)
 
-if confirmation == 'N':
-    quit("Exiting program.")
-
-if confirmation == 'Y':
-    user_choice = intial_input
-else:
+if confirmation != 'y':
     user_choice = confirmation
+
+print(user_choice)
 
 
