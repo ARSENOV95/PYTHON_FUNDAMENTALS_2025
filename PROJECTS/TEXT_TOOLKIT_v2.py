@@ -17,6 +17,7 @@ print("9. Word Frequency Counter")
 intial_input = input()
 
 utilities.valid_input(intial_input)
+print(intial_input)
 
 confirm_choice = input("Please confirm choice Y/N: ")
 
@@ -27,7 +28,7 @@ confirmation = utilities.select_choice(confirm_choice)
 if confirmation == 'N':
     quit("Exiting program.")
 
-if confirmation != 'Y':
+if confirmation == 'Y':
     user_choice = intial_input
 else:
     user_choice = confirmation
