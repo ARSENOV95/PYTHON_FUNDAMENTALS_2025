@@ -1,19 +1,23 @@
-maze_levels = int(input())
+number_of_levels = int(input())
 
-current_level = 0
-no_eskape = False
+maze = []
+moves = 0
+deadend = False
 
-for level in range(maze_levels):
-    current_level += 1
+for level in range(number_of_levels):
+    curr_lvl = input()
+    maze.append(curr_lvl)
 
-    layour = input()
 
-    level_layout = [char for char in layour]
-    if current_level > 1 and level_layout.count('#') == 6:
-        no_eskape = True
-
+for lvl in range(1,len(maze)):
+   level = maze[lvl]
+   for i  in range(len(level)):
+       #print(level[i])
+       if not(level[i] == 'k' or level[i] == '#'):
+           moves += 1
     
-
-
-if no_eskape:
-    print("Kate cannot get out")
+if moves >= number_of_levels:
+    moves += 1 
+    print(f'Kate got out in {moves} moves')
+else:
+    print('Kate cannot get out')
