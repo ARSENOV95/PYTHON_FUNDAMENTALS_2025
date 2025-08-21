@@ -12,4 +12,7 @@ for row in range(row_nums):
 
 
 for i in range(len(grid)):
-    print(grid[i])
+    for j in range(len(grid[0])):
+        if grid[i][j] == grid[i][j]
+
+    

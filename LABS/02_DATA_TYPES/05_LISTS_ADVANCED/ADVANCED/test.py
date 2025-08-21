@@ -3,3 +3,8 @@ y = [[9, 8, 7],[6, 5, 4],[3, 2, 1]]
 
 res = [[0]*3 for _ in range(3)] # creates a blank 3 X 3 matrix
 
+    
+
+if not deadend:
+    moves += 1 # the final move to exit the maze 
+    print(f"Kate got out in {moves} moves")
