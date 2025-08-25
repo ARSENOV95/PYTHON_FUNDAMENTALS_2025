@@ -5,10 +5,16 @@ def line_checker(x1 :float,y1 :float,x2 :float,y2 :float,x3 :float,y3 :float,x4 
     line2 = abs(x3) + abs(x4) + abs(y3)- abs(y4)    
 
     if line1 >= line2:
-        return f"({floor(x1)}, {floor(y1)})({floor(x2)}, {floor(y2)})"
+        if (x1 + y1) >= (x2 + y2):
+            return f"({floor(x1)}, {floor(y1)})({floor(x2)}, {floor(y2)})"
+        else:
+            return f"({floor(x2)}, {floor(y2)})({floor(x1)}, {floor(y1)})"          
+        
     elif line2 > line1:
-        return f"({floor(x3)}, {floor(y3)})({floor(x4)}, {floor(y4)})"    
-
+        if (x3 + y3) >= (x4 + y4):
+            return f"({floor(x3)}, {floor(y3)})({floor(x4)}, {floor(y4)})"    
+        else:
+            return f"({floor(x4)}, {floor(y4)})({floor(x3)}, {floor(y3)})"    
 
 l1_x1 = float(input())
 l1_y1 = float(input())
